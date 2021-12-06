@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRG7926 Final Project</title>
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <!--Hero-->
+    <header class="hero">
+      <div class="center-content">
+        <h1>My Recipe Box</h1>
+        <a href="#recipeForm" class="button">Add a Recipe</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!--recipies container-->
+
+        <h3>Recipes:</h3>
+        <div class="divider"></div>
+        <div id="allRecipes" class="allRecipes">
+          <!-- card -->
+          <div class="row">
+            <!--card row-->
+            <div class="col s12">
+              <div class="card darken-1">
+                <div class="card-content">
+                  <span class="card-title center" id="recipeElement"></span>
+                  <div class="divider"></div>
+                  <p id="ingredientElement"></p>
+                  <p id="instructionElement"></p>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+          <!--card row end-->
+        </div>
+        <!--all recipes container-->
+      </div>
+      <!--recipes container end -->
+
+      <div class="container">
+        <!-- error message -->
+        <div id="output"></div>
+
+        <!-- form start -->
+        <form id="recipeForm" class="col s12">
+          <div class="row">
+            <!-- Recipe Name -->
+            <div class="input-field col s12">
+              <i class="material-icons prefix">label</i>
+              <label for="name">Recipe Name</label>
+              <input
+                name="name"
+                id="name"
+                type="text"
+                class="validate"
+                required
+              />
+            </div>
+            <!-- Ingredients -->
+            <div class="input-field col s12">
+              <i class="material-icons prefix">list</i>
+              <label for="ingredients">Ingredients</label>
+              <textarea
+                name="ingredients"
+                id="ingredients"
+                class="materialize-textarea validate"
+                style="height: 100px"
+                required
+              ></textarea>
+            </div>
+            <!-- Instructions -->
+            <div class="input-field col s12">
+              <i class="material-icons prefix">edit</i>
+              <label for="instructions">Instructions</label>
+              <textarea
+                name="instructions"
+                id="instructions"
+                class="materialize-textarea validate"
+                style="height: 100px"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <!-- button -->
+          <p class="right-align">
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              id="submit"
+            >
+              Add Recipe
+              <i class="material-icons right">near_me</i>
+            </button>
+          </p>
+        </form>
+        <!--form end-->
+      </div>
+      <!--form container end-->
+    </main>
+
+    <!--Jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <!-- script -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>
